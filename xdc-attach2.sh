@@ -1,0 +1,1 @@
+sudo ../origXdpos/build/bin/XDC attach nodes/2/XDC.ipc

@@ -12,7 +12,7 @@ export $(cat .env | xargs)
 Bin_NAME=XDC
 
 WORK_DIR=$PWD
-PROJECT_DIR="/root/XinFin/XDPoS-TestNet-Apothem"
+PROJECT_DIR="../origXdpos"
 cd $PROJECT_DIR && make all
 cd $WORK_DIR
 
@@ -42,4 +42,4 @@ echo Starting the nodes ...
 # child_proc="$child_proc $!"
 # ${PROJECT_DIR}/build/bin/$Bin_NAME --bootnodes "enode://1c20e6b46ce608c1fe739e78611225b94e663535b74a1545b1667eac8ff75ed43216306d123306c10e043f228e42cc53cb2728655019292380313393eaaf6e23@127.0.0.1:30301" --syncmode "full" --datadir ./nodes/2 --networkid 853 --port 30304 --rpc --rpccorsdomain "*" --ws --wsaddr="0.0.0.0" --wsorigins "*" --wsport 8556 --rpcaddr 0.0.0.0 --rpcport 8546 --rpcvhosts "*" --unlock "${wallet2}" --password ./.pwd --mine --gasprice "${GASPRICE}" --targetgaslimit "420000000" --verbosity ${VERBOSITY} --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,XDPoS --ethstats "XinFin-MasterNode-02:xinfin_network_stats@stats.testnet.xinfin.network:3000" &
 # child_proc="$child_proc $!"
-${PROJECT_DIR}/build/bin/$Bin_NAME --bootnodes "enode://1c20e6b46ce608c1fe739e78611225b94e663535b74a1545b1667eac8ff75ed43216306d123306c10e043f228e42cc53cb2728655019292380313393eaaf6e23@109.169.40.128:30301" --syncmode "full" --datadir ./nodes/3 --networkid 853 --port 30305 --rpc --rpccorsdomain "*" --ws --wsaddr="0.0.0.0" --wsorigins "*" --wsport 8557 --rpcaddr 0.0.0.0 --rpcport 8547 --rpcvhosts "*" --unlock "${wallet3}" --password ./.pwd --mine --gasprice "${GASPRICE}" --targetgaslimit "420000000" --verbosity ${VERBOSITY} --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,XDPoS --ethstats "XinFin-MasterNode-03:xinfin_network_stats@stats.testnet.xinfin.network:3000" 
+${PROJECT_DIR}/build/bin/$Bin_NAME --bootnodes "enode://cbac8dee6adc4dc6b68bbb5c84e4810a4ca1f517622306d21decf72c0c4de6b0b7f07ba4ab333a75f34b0f0b9b852c8b7f5f56bd6aa06a3170a096a48958d2ed@127.0.1.1:30301" --syncmode "full" --datadir ./nodes/3 --networkid 13123 --port 30305 --rpc --rpccorsdomain "*" --ws --wsaddr="0.0.0.0" --wsorigins "*" --wsport 8557 --rpcaddr 0.0.0.0 --rpcport 8547 --rpcvhosts "*" --unlock "${wallet3}" --password ./.pwd --mine --gasprice "${GASPRICE}" --targetgaslimit "420000000" --verbosity ${VERBOSITY} --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,XDPoS --ethstats "KMZXinFin-MasterNode-03:xinfin_network_stats@stats.testnet.xinfin.network:3000" 
